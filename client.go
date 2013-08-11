@@ -1,4 +1,4 @@
-package main
+package gorbachov
 
 import (
     "fmt"
@@ -11,12 +11,6 @@ type Client struct {
     connection *textproto.Conn
 }
 
-// Server message (http://tools.ietf.org/html/rfc1459.html#section-2.3)
-type Message struct {
-    prefix string
-    command string
-    arguments []string
-}
 
 // SendResponse sends a 'message' string to the client's connection.
 func (client *Client) SendResponse(message string) {
